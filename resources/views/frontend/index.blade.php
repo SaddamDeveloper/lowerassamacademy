@@ -3,17 +3,22 @@
     <!--================ End Header Menu Area =================-->
 
     <!--================ Start Home Banner Area =================-->
-    {{-- <section class="home_banner_area">
+      <section class="home_banner_area">
+        {{-- <div id="slider" class="nivoSlider"> 
+          <img src="{{asset('frontend/img/slider/toystory.jpg')}}" data-thumb="{{('frontend/img/slider/toystory.jpg')}}" alt="" /> 
+          <img src="{{asset('frontend/img/slider/walle.jpg')}}" data-thumb="{{('frontend/img/slider/walle.jpg')}}" alt="" data-transition="slideInLeft" /> 
+          <img src="{{asset('frontend/img/slider/nemo.jpg')}}" data-thumb="{{('frontend/img/slider/nemo.jpg')}}" alt="" title="#htmlcaption" /> 
+        </div> --}}
       <div class="banner_inner">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="banner_content text-center">
                 <p class="text-uppercase">
-                  Best online education service In the world
+                  Best Coaching best way to deal
                 </p>
                 <h2 class="text-uppercase mt-4 mb-5">
-                  One Step Ahead This Season
+                  Lower Assam Academy
                 </h2>
                 <div>
                   <a href="#" class="primary-btn2 mb-3 mb-sm-0">learn more</a>
@@ -24,7 +29,7 @@
           </div>
         </div>
       </div>
-    </section> --}}
+    </section>
     <!--================ End Home Banner Area =================-->
 
     <!--================ Start Feature Area =================-->
@@ -33,19 +38,22 @@
         <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="main_title">
-              <h2 class="mb-3">Awesome Feature</h2>
+              <h2 class="mb-3">Lower Assam Academy</h2>
               <p>
-                Replenish man have thing gathering lights yielding shall you
+                <center>Affiliated to CBSE, <br>
+                  Delhi 
+                Class: Nursery to XII<br>
+                (Science , Arts & Commerce)</center>
               </p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
+            <div class="single_feature text-center">
               <div class="icon"><span class="flaticon-student"></span></div>
               <div class="desc">
-                <h4 class="mt-3 mb-2">Scholarship Facility</h4>
+                <h4 class="mt-3 mb-2">Labortory Computers</h4>
                 <p>
                   One make creepeth, man bearing theira firmament won't great
                   heaven
@@ -55,7 +63,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
+            <div class="single_feature text-center">
               <div class="icon"><span class="flaticon-book"></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Sell Online Course</h4>
@@ -68,7 +76,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="single_feature">
+            <div class="single_feature text-center">
               <div class="icon"><span class="flaticon-earth"></span></div>
               <div class="desc">
                 <h4 class="mt-3 mb-2">Global Certification</h4>
@@ -87,7 +95,7 @@
     <!--================ Start Popular Courses Area =================-->
     <div class="popular_courses">
       <div class="container">
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
           <div class="col-lg-5">
             <div class="main_title">
               <h2 class="mb-3">Our Popular Courses</h2>
@@ -96,7 +104,7 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="row">
           <!-- single course -->
           <div class="col-lg-12">
@@ -590,4 +598,32 @@
       </div>
     </div>
     <!--================ End Testimonial Area =================-->
+@endsection
+@section('script')
+<script type="text/javascript">
+  $(document).ready(function() {
+  $('#slider').nivoSlider({
+    effect: 'random',
+    slices: 15,
+    boxCols: 8,
+    boxRows: 4,
+    animSpeed: 500,
+    pauseTime: 3000,
+    startSlide: 0,
+    directionNav: true,
+    controlNav: true,
+    controlNavThumbs: false,
+    pauseOnHover: true,
+    manualAdvance: false,
+    prevText: 'Prev',
+    nextText: 'Next',
+    randomStart: false,
+    beforeChange: function(){},
+    afterChange: function(){},
+    slideshowEnd: function(){},
+    lastSlide: function(){},
+    afterLoad: function(){}
+    });
+  });
+</script>
 @endsection
