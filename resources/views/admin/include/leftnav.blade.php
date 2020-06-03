@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
       <div class="navbar nav_title" style="border: 0;">
-        <a href="{{route('admin.dashboard')}}" class="site_title"><i class="fa fa-paw"></i> <span>{{__('NEWS TIME NORTHEAST')}}</span></a>
+        <a href="{{route('admin.dashboard')}}" class="site_title"><i class="fa fa-paw"></i> <span>{{__('LAA')}}</span></a>
       </div>
 
       <div class="clearfix"></div>
@@ -9,7 +9,7 @@
       <!-- menu profile quick info -->
       <div class="profile clearfix">
         <div class="profile_pic">
-          <img src="{{asset('production/images/img.jpg')}}" alt="..." class="img-circle profile_img">
+          <img src="{{asset('admin/production/images/img.jpg')}}" alt="..." class="img-circle profile_img">
         </div>
         <div class="profile_info">
           <span>Welcome,</span>
@@ -27,29 +27,9 @@
           <ul class="nav side-menu">
           <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-home"></i> Home </a>
             </li>
-           
-            <li><a><i class="fa fa-edit"></i> News Post <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                <li><a href="{{route('admin.create_post')}}">Add Post</a></li>
-                <li><a href="{{route('admin.create_video')}}">Add Youtube video</a></li>
-                <li><a href="{{route('admin.eng_list_post')}}">English List Posts</a></li>
-                <li><a href="{{route('admin.eng_video_list')}}">English Video List</a></li>
-                <li><a href="{{route('admin.ass_list_post')}}">Assamese List Posts</a></li>
-                <li><a href="{{route('admin.ass_video_list')}}">Assamese Video List</a></li>
-              </ul>
+          <li><a href="{{route('admin.sliders')}}"><i class="fa fa-sliders"></i>All Sliders</a>
             </li>
-            <li><a><i class="fa fa-list-alt"></i> Manage Category <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                <li><a href="{{route('admin.create_catgeory')}}">Add Category</a></li>
-                <li><a href="{{route('admin.list_category')}}">List Category</a></li>
-              </ul>
-            </li>
-            <li><a><i class="fa fa-user"></i> Homepage Manage <span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                <li><a href="{{route('admin.slider_list')}}">Slider Post List</a></li>
-                <li><a href="{{route('admin.four_list')}}">Four Post List</a></li>
-                <li><a href="{{route('admin.popular_list')}}">Popular List</a></li>
-              </ul>
+          <li><a href="{{route('admin.notices')}}"><i class="fa fa-legal"></i>All Notices</a>
             </li>
           </ul>
         </div>
