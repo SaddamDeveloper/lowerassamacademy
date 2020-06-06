@@ -4,17 +4,13 @@
           <div class="row">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                   <div class="footer-box">
-                      <h3 class="">Rajdhani Public School</h3>
-                      <!-- <a href="index.html"><img class="img-responsive" src="img/logo-footer.png" alt="logo"></a> -->
+                      <h3 class="">Lower Assam Academy</h3>
                       <div class="footer-about">
-                          <p>Registered under Societies Registration Act, XXI of 1860, Jadab Chandra Nath Memorial Educational Trust</p>
+                          <p>Quality education is our motto.</p>
                       </div>
                       <ul class="footer-social">
                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                          <!-- <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                          <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                          <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li> -->
                           <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                       </ul>
                   </div>
@@ -77,10 +73,9 @@
                   <div class="footer-box">
                       <h3>Information</h3>
                       <ul class="corporate-address">
-                          <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#"> Nazirakhat-Sonapur-Guwahati, kamrup, Assam</a></li>
-                          <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(+91)9435112572"> (+91) 94351-12572 </a></li>
-                          <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(+91)9957615240"> (+91) 99576-15240 </a></li>
-                          <li><i class="fa fa-envelope-o" aria-hidden="true"></i>nathamritchandra1960@gmail.com</li>
+                          <li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#">Kayakuchi(Near old petrol pump), Barpeta (Assam) - 781352</a></li>
+                          <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(+91)9435112572"> (+91) 70020-65474 </a></li>
+                          <li><i class="fa fa-envelope-o" aria-hidden="true"></i>academykayakuchi@gmail.com</li>
                       </ul>
                       <!-- <div class="newsletter-area">
                           <h3>Newsletter</h3>
@@ -95,31 +90,6 @@
                       </div> -->
                   </div>
               </div>
-              <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="footer-box">
-                      <h3>facebook</h3>
-                      <ul class="flickr-photos">
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/1.jpg" alt="flickr"></a>
-                          </li>
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/2.jpg" alt="flickr"></a>
-                          </li>
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/3.jpg" alt="flickr"></a>
-                          </li>
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/4.jpg" alt="flickr"></a>
-                          </li>
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/5.jpg" alt="flickr"></a>
-                          </li>
-                          <li>
-                              <a href="#"><img class="img-responsive" src="img/footer/6.jpg" alt="flickr"></a>
-                          </li>
-                      </ul>
-                  </div>
-              </div> -->
           </div>
       </div>
   </div>
@@ -127,23 +97,9 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                  <p>&copy; 2018 Rajdhani Public School All Rights Reserved. &nbsp; Designed by<a target="_blank" href="http://www.webinfotech.net.in/"> Web Infotech</a></p>
+                  <p>&copy; 2020 Lower Assam Academy All Rights Reserved. &nbsp; Designed by<a target="_blank" href="http://fb.com/therevolusys/"> The Revolusys</a></p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <!-- <ul class="payment-method">
-                      <li>
-                          <a href="#"><img alt="payment-method" src="img/payment-method1.jpg"></a>
-                      </li>
-                      <li>
-                          <a href="#"><img alt="payment-method" src="img/payment-method2.jpg"></a>
-                      </li>
-                      <li>
-                          <a href="#"><img alt="payment-method" src="img/payment-method3.jpg"></a>
-                      </li>
-                      <li>
-                          <a href="#"><img alt="payment-method" src="img/payment-method4.jpg"></a>
-                      </li>
-                  </ul> -->
               </div>
           </div>
       </div>

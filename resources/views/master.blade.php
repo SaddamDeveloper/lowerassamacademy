@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-  
-<!-- Mirrored from rajdhanipublicschool.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Jun 2020 08:20:39 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
-    <title></title>
-
+    <title>Lower Assam Academy</title>
     <meta charset="utf-8">
        <meta http-equiv="x-ua-compatible" content="ie=edge">
-       <title>Rajdhani Public School | Design by Web Infotech</title>
        <meta name="description" content="">
        <meta name="viewport" content="width=device-width, initial-scale=1">
               <!-- Favicon -->
-       <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+       <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/favicon.png')}}">
        <!-- Normalize CSS -->
        <link rel="stylesheet" href="{{asset('frontend/css/normalize.css')}}">
        <!-- Main CSS -->
@@ -95,4 +91,5 @@
   <script src="{{asset('frontend/js/main.js')}}" type="text/javascript"></script>
   <script src="{{asset('frontend/js/share.js')}}"></script>
   @yield('script')
+  @stack('script')
 </html>
