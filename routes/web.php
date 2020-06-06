@@ -21,5 +21,17 @@ Route::group(['middleware'=>'auth:admin','prefix'=>'admin','namespace'=>'Admin']
     Route::post('/add/notices', 'AdminDashboardController@addNotice')->name('admin.add_notice');
     Route::get('/get/notices/list', 'AdminDashboardController@getNoticeList')->name('admin.get_notice_list');
     Route::get('/status/notice/{id}/{status}','AdminDashboardController@statusNotice')->name('admin.notice_status');
+    
+    // Galleries
+    Route::get('/all/galleries', 'AdminDashboardController@galleries')->name('admin.galleries');
+    Route::get('/add/gallery/form', 'AdminDashboardController@addGalleryForm')->name('admin.add_gallery_form');
+    Route::post('/add/galleries', 'AdminDashboardController@addGallery')->name('admin.add_gallery');
+    Route::get('/get/galleries/list', 'AdminDashboardController@getGalleryList')->name('admin.get_gallery_list');
+    Route::get('/status/gallery/{id}/{status}','AdminDashboardController@statusGallery')->name('admin.gallery_status');
+
+    // Applicants
+    Route::get('/applicants', 'AdminDashboardController@applicants')->name('admin.applicants');
+    Route::get('/applicant/show/{id}', 'AdminDashboardController@show')->name('applicant.show');
+    Route::get('/applicant/edit/{id}', 'AdminDashboardController@edit')->name('applicant.edit');
 });
 

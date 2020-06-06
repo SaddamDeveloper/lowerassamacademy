@@ -10,6 +10,8 @@ use Intervention\Image\Facades\Image;
 use DataTables;
 use DB;
 use Carbon\Carbon;
+use App\Gallery;
+use App\User;
 class AdminDashboardController extends Controller
 {
     public function index(){
@@ -182,5 +184,95 @@ class AdminDashboardController extends Controller
              return redirect()->back()->with('error','Something Went Wrong Please Try Again');
         } 
 
+    }
+
+    public function galleries()
+    {
+        return view('admin.galleries');
+    }
+
+    public function getGalleryList()
+    {
+        $query = Gallery::orderBy('created_at','desc');
+        return datatables()->of($query->get())
+        ->addIndexColumn()
+        ->addColumn('gallery', function($row){
+            if($row->gallery){
+                $gallery = '<img src="'.asset("admin/galleries/".$row->gallery).'" width="200"/>';
+            }
+            return $gallery;
+        })
+        ->addColumn('action', function($row){
+            if($row->status == 1){
+                $btn = '<a href="'.route('admin.gallery_status', ['id' => encrypt($row->id), 'status' => encrypt(2)]).'" class="btn btn-danger">Deactivate</a>';
+            }else{
+                $btn = '<a href="'.route('admin.gallery_status', ['id' => encrypt($row->id), 'status' => encrypt(1)]).'" class="btn btn-success">Activate</a>';
+            }
+            return $btn;
+        })
+        ->rawColumns(['action', 'gallery'])
+        ->make(true);
+    }
+
+    public function addGallery(Request $request)
+    {
+        $this->validate($request, [
+            'title'   => 'required',
+            'gallery' => 'required|mimes:jpeg,png,jpg|max:2048',
+        ]);
+        
+        if($request->hasfile('gallery')){
+            $gallery = $request->file('gallery');
+            $destination = base_path().'/public/admin/galleries/';
+            $gallery_extension = $gallery->getClientOriginalExtension();
+            $gallery_name = md5(date('now').time()).".".$gallery_extension;
+            $original_path = $destination.$gallery_name;
+            $gallery->move($destination, $gallery_name);
+        }
+
+        $galleries = new Gallery;
+        $galleries->title = $request->input('title');
+        $galleries->gallery = $gallery_name;
+        
+        if($galleries->save()){
+            return redirect()->back()->with('message', 'Photo Added Successfully!');
+        }else{
+            return redirect()->back()->with('error', 'Something Went Wrong!');
+        }
+    }
+
+    public function addGalleryForm()
+    {
+        return view('admin.add_gallery_form');
+    }
+
+    public function statusGallery($nId, $statusId)
+    {
+        try {
+            $id = decrypt($nId);
+            $sId = decrypt($statusId);
+        }catch(DecryptException $e) {
+            return redirect()->back();
+        }
+
+        $gallery_update = DB::table('galleries')
+        ->where('id', $id)
+        ->update([
+            'status' => $sId,
+            'updated_at' => Carbon::now()->setTimezone('Asia/Kolkata')->toDateTimeString()
+        ]);
+
+        if($gallery_update){
+            return redirect()->back()->with('message','Gallery Updated Successfully');
+        }else{
+             return redirect()->back()->with('error','Something Went Wrong Please Try Again');
+        } 
+
+    }
+
+    public function applicants()
+    {
+        $applicants = User::orderBy('created_at', 'desc')->get();
+        return view('admin.applicants', compact('applicants'));
     }
 }

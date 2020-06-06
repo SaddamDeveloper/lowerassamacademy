@@ -31,6 +31,10 @@
             </li>
           <li><a href="{{route('admin.notices')}}"><i class="fa fa-legal"></i>All Notices</a>
             </li>
+          <li><a href="{{route('admin.galleries')}}"><i class="fa fa-image"></i>All Galleries</a>
+            </li>
+          <li><a href="{{route('admin.applicants')}}"><i class="fa fa-users"></i>All Applicants</a>
+            </li>
           </ul>
         </div>
       </div>

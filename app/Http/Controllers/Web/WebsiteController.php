@@ -9,6 +9,7 @@ use App\Notice;
 use App\User;
 use Hash;
 use Auth;
+use App\Gallery;
 class WebsiteController extends Controller
 {
     public function index()
@@ -30,7 +31,8 @@ class WebsiteController extends Controller
 
     public function gallery()
     {
-        return view('frontend.gallery');
+        $gallery = Gallery::where('status', 1)->orderBy('created_at', 'desc')->get();
+        return view('frontend.gallery', compact('gallery'));
     }
 
     public function admissionProcedure()
