@@ -92,35 +92,32 @@
                   <div class="mobile-menu">
                         <nav id="dropdown">
                           <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{route('web.index')}}">Home</a></li>
                             <li><a href="#">About Us</a>
                                 <ul>
-                                    <li><a href="about.html">Principal's Message</a></li>
-                                    <li><a href="our_school.html">Our School</a></li>
-                                    <li><a href="facilities.html">Facilities</a></li>
+                                    <li><a href="{{route('frontend.about')}}">Principal's Message</a></li>
+                                    <li><a href="{{route('web.our_school')}}">Our School</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Academics</a>
                                 <ul>
-                                    <li><a href="courses.html">Courses</a></li>
-                                    <li><a href="exam.html">Exams</a></li>
-                                    <li><a href="process.html">Academic Process</a></li>
+                                    <li><a href="{{route('web.courses')}}">Courses</a></li>
+                                    <li><a href="{{route('web.exams')}}">Exams</a></li>
                                 </ul>
                               </li>
                               <li><a href="#">Admission</a>
                                   <ul>
-                                      <li><a href="ad_procedure.html">Admission Procedure</a></li>
-                                      <li><a href="registration.html">Registration Cum Admission</a></li>
+                                      <li><a href="{{route('web.admission_proc')}}">Admission Procedure</a></li>
+                                      <li><a href="{{route('web.reg_admission')}}">Registration Cum Admission</a></li>
                                   </ul>
                               </li>
                               </li>
-                              <li><a href="blogs.html">Blog</a>
-                              <li><a href="gallery.html">Gallery</a>
+                              <li><a href="{{route('web.gallery')}}">Gallery</a>
                               </li>
-                              <li><a href="contact.html">Contact</a>
+                              <li><a href="{{route('web.contact')}}">Contact</a>
                               </li>
                             <li>
-                                <a class="login-btn-area" href="student/login.html"><i class="fa fa-download"></i>Admission Here</a>
+                                <a class="login-btn-area" href="{{route('student.login')}}"><i class="fa fa-download"></i>Admission Here</a>
                               </li>
                             </ul>
                       </nav>

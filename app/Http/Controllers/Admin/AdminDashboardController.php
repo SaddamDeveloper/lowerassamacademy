@@ -12,10 +12,15 @@ use DB;
 use Carbon\Carbon;
 use App\Gallery;
 use App\User;
+use App\Pay;
+use Auth;
 class AdminDashboardController extends Controller
 {
     public function index(){
-        return view('admin.dashboard');
+        $total_users = User::count();
+        $total_amount = Pay::sum('amount');
+        $student = User::orderBy('created_at', 'desc')->limit(10)->get();
+        return view('admin.dashboard', compact('total_users', 'total_amount', 'student'));
     }
     public function sliders()
     {
@@ -274,5 +279,58 @@ class AdminDashboardController extends Controller
     {
         $applicants = User::orderBy('created_at', 'desc')->get();
         return view('admin.applicants', compact('applicants'));
+    }
+
+    public function getApplicantList()
+    {
+        $query = User::orderBy('created_at','desc');
+        return datatables()->of($query->get())
+        ->addIndexColumn()
+        ->addColumn('action', function($row){
+            $btn = '<a href="'.route('admin.show', ['id' => encrypt($row->id)]).'" class="btn btn-primary">View</a>
+                    <a href="'.route('admin.edit', ['id' => encrypt($row->id)]).'" class="btn btn-warning" target="_blank">Edit</a> 
+            ';
+            if($row->payment_status == 2){
+                $btn .= '<a href="'.route('admin.payproof', ['id' => encrypt($row->id)]).'" class="btn btn-info" target="_blank">Payment Proof</a>';
+            }
+            return $btn;
+        })
+        ->rawColumns(['action'])
+        ->make(true);
+    }
+
+    public function show($aId)
+    {
+        try {
+            $id = decrypt($aId);
+        }catch(DecryptException $e) {
+            return redirect()->back();
+        }
+        $single_applicant = User::where('id', $id)->first();
+        return view('admin.show', compact('single_applicant'));
+    }
+
+    public function edit($aId)
+    {
+        try {
+            $id = decrypt($aId);
+        }catch(DecryptException $e) {
+            return redirect()->back();
+        }
+        
+        $single_applicant = User::where('id', $id)->first();
+        return view('admin.update', compact('single_applicant'));
+    }
+
+    public function payProof($aId)
+    {
+        try {
+            $id = decrypt($aId);
+        }catch(DecryptException $e) {
+            return redirect()->back();
+        }
+        $user = User::where('id', $id)->first();
+        $payee = Pay::where('user_id', $id)->first();
+        return view('admin.payee', compact('payee', 'user'));
     }
 }

@@ -23,7 +23,7 @@
                 </div>
                     <div>
                         <div class="x_content">
-                          <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%" id="example">
+                          <table class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%" id="applicant_list">
                             <thead>
                             <tr>
                               <th>Sl. No</th>
@@ -37,32 +37,11 @@
                               <th>DOB</th>
                               <th>Religion</th>
                               <th>Payment Status</th>
-                               <th>Action</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                              @php
-                              @endphp
-                              @foreach ($applicants as $applicant)
-                                <tr>
-                                        <td>{{ $applicant->id }}</td>
-                                        <td>{{ $applicant->name}}</td>
-                                        <td>{{ $applicant->fn}}</td>
-                                        <td>{{ $applicant->mn }}</td>
-                                        <td>{{ $applicant->class }}</td>
-                                        <td>{{ $applicant->session }}</td>
-                                        <td>{{ $applicant->registration_no }}</td>
-                                        <td>{{ $applicant->dob }}</td>
-                                        <td>{{ $applicant->religion }}</td>
-                                        <td>
-                                          
-                                        </td>
-                                        <td> 
-                                             <a href='{{route('applicant.show', ['id' => encrypt($applicant->id)])}}' class='btn btn-info' target="_blank">View</a>
-                                             {{-- <a href='{{route('applicant.edit', ['id' => encrypt($value->id)])}}' class='btn btn-warning' target="_blank">Edit</a>  --}}
-                                       </td>
-                                </tr>
-                                @endforeach
+                             
                             </tbody>
                             <tfoot>
                             <tr>
@@ -76,6 +55,37 @@
             </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <script>
+        $(function(){
+            var table = $('#applicant_list').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('admin.get_applicant_list') }}",
+                columns: [
+                    {data: 'id', name: 'id',searchable: true},
+                    {data: 'application_no', name: 'application_no',searchable: true},      
+                    {data: 'name', name: 'name',searchable: true},      
+                    {data: 'fn', name: 'fn',searchable: true},      
+                    {data: 'mn', name: 'mn',searchable: true},      
+                    {data: 'course', name: 'course',searchable: true},      
+                    {data: 'session', name: 'session',searchable: true},      
+                    {data: 'registration', name: 'registration',searchable: true},      
+                    {data: 'dob', name: 'dob',searchable: true},      
+                    {data: 'religion', name: 'religion',searchable: true},      
+                    {data: 'payment_status', name: 'payment_status', render:function(data, type, row){
+                      if (row.payment_status == '1') {
+                        return "<label class='label label-warning'>Not Paid</label>"
+                        }else if(row.payment_status == '2'){
+                          return "<label class='label label-success'>Paid</label>"
+                          }                        
+                    }},      
+                    {data: 'action', name: 'action',searchable: true},      
+                ]
+            });
+        })
+    </script>
 @endsection
 
 

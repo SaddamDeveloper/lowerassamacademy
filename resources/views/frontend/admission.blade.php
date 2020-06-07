@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <label for="admission_no">Application No.</label>
                                 <input type="text" class="form-control" name="admission_no" disabled value="{{$generatedID}}">
-                                <input type="text" name="admission" value="{{$generatedID}}">
+                                <input type="hidden" name="admission" value="{{$generatedID}}">
                             </div>
                         </div>
                         <div class="col-md-4">

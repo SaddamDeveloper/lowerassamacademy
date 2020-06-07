@@ -35,12 +35,11 @@
                       <ul class="featured-links">
                           <li>
                               <ul>
-                                  <li><a href="index.html">Home</a></li>
-                                  <li><a href="admission.html">Admissions</a></li>
-                                  <li><a href="course.html">Course</a></li>
-                                  <li><a href="Exams.html">Exam</a></li>
-                                  <li><a href="facilities.html">Facilities</a></li>
-                                  <li><a href="about.html">Principal's Message</a></li>
+                                  <li><a href="{{route('web.index')}}">Home</a></li>
+                                  <li><a href="{{route('student.login')}}">Admission Here</a></li>
+                                  <li><a href="{{route('web.courses')}}">Course</a></li>
+                                  <li><a href="{{route('web.exams')}}">Exams</a></li>
+                                  <li><a href="{{route('frontend.about')}}">Principal's Message</a></li>
 
                               </ul>
                           </li>
@@ -52,14 +51,11 @@
               </div>
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                   <div class="footer-box">
-                      <!-- <h3>Featured Links</h3> -->
                       <ul class="featured-links">
                           <li>
                               <ul>
-                                  <li><a href="process.html">Academic Process</a></li>
-                                  <li><a href="ad_procedure.html">Admission Procedure</a></li>
-                                  <li><a href="registration.html">Registration Cum Admission</a></li>
-                                  <!--<li><a href="http://rajdhanipublicschool.in/tour">Academic Tour</a></li>-->
+                                  <li><a href="{{route('web.admission_proc')}}">Admission Procedure</a></li>
+                                  <li><a href="{{route('web.reg_admission')}}">Registration Cum Admission</a></li>
                               </ul>
                           </li>
                           <li>
@@ -77,17 +73,6 @@
                           <li><i class="fa fa-phone" aria-hidden="true"></i><a href="Phone:(+91)9435112572"> (+91) 70020-65474 </a></li>
                           <li><i class="fa fa-envelope-o" aria-hidden="true"></i>academykayakuchi@gmail.com</li>
                       </ul>
-                      <!-- <div class="newsletter-area">
-                          <h3>Newsletter</h3>
-                          <div class="input-group stylish-input-group">
-                              <input type="text" placeholder="Enter your e-mail here" class="form-control">
-                              <span class="input-group-addon">
-                                      <button type="submit">
-                                          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                      </button>
-                                  </span>
-                          </div>
-                      </div> -->
                   </div>
               </div>
           </div>

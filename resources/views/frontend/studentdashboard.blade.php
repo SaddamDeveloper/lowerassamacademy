@@ -6,7 +6,12 @@
     <div class="row">
         <div class="col-md-12">
                 <div class="pay-now-box text-center" style="padding: 180px 0;">
-                @if(isset($payment->buyer_email) && !empty($payment->buyer_email))
+                {{-- @if(isset($payment->buyer_email) && !empty($payment->buyer_email))
+
+                @else --}}
+                    @if($student->payment_status == 1)
+                        <a href="{{route('frontend.payment')}}" class="btn btn-success">PAY</a>
+                    @elseif($student->payment_status == 2)
                     <div id="DivIdToPrint">    
                         <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
                             <div class="row">
@@ -14,20 +19,20 @@
                                     <address>
                                         <strong>Recieve with Thanks From</strong>
                                         <br>
-                                        {{$payment->buyer_name}}
+                                        {{$student->name}}
                                         <br>
-                                        {{$payment->buyer_email}}, 
+                                        {{$pay->email}}, 
                                         <br>
-                                        <abbr title="Phone">P:</abbr> {{$payment->buyer_phone}}<br>
-                                        <abbr title="Payment Id">Payment Id:</abbr> {{$payment->payment_id}}
+                                        <abbr title="Phone">Phone:</abbr> {{$student->mobile}}<br>
+                                        <abbr title="Payment Id">Transaction ID:</abbr> {{$pay->transaction_id}}
                                     </address>
                                 </div>
                                 <div class="col-xs-5 col-sm-5 col-md-5 text-right">
                                     <p style="width: 100%">
-                                        <em>Date:{{$payment->payment_at}}</em>
+                                        <em>Date:{{$pay->created_at}}</em>
                                     </p>
                                     <p>
-                                        <em>Receipt #: {{$payment->id}}R</em>
+                                        <em>Receipt #: LAA2020{{$pay->id}}</em>
                                     </p>
                                 </div>
                             </div>
@@ -49,8 +54,8 @@
                                         <tr>
                                             <td class="col-md-8"><em>One Time Admission Form Fees</em></h4></td>
                                             
-                                            <td class="col-md-2 text-center">Rs. {{$payment->amount}}</td>
-                                            <td class="col-md-2 text-center">Rs. {{$payment->amount}}</td>
+                                            <td class="col-md-2 text-center">Rs. {{$pay->amount}}</td>
+                                            <td class="col-md-2 text-center">Rs. {{$pay->amount}}</td>
                                         </tr>
                                        
                                             <td>   </td>
@@ -64,7 +69,7 @@
                                             </p></td>
                                             <td class="text-center">
                                             <p>
-                                                <strong>Rs. {{$payment->amount}}</strong>
+                                                <strong>Rs. {{$pay->amount}}</strong>
                                             </p>
                                             <p>
                                                 <strong>Rs. 0</strong>
@@ -74,7 +79,7 @@
                                             <td>   </td>
                                           
                                             <td class="text-right"><h4><strong>Total: </strong></h4></td>
-                                            <td class="text-center text-danger"><h4><strong>Rs. {{$payment->amount}}</strong></h4></td>
+                                            <td class="text-center text-danger"><h4><strong>Rs. {{$pay->amount}}</strong></h4></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -85,14 +90,11 @@
                     </div>
                         <button type="button" class="btn btn-success btn-lg btn-block" onclick='printDiv();'>
                             Print   <span class="glyphicon glyphicon-chevron-right"></span>
-                    </button>
-                @else
-                    @if(isset($registration->user_id) && !empty($registration->user_id))
-                        <a href="{{route('frontend.payment')}}" class="btn btn-success">PAY</a>
+                        </button>
                     @else
                         <a href="{{route('frontend.student_admission')}}" class="btn btn-success">FILL UP THE FORM</a>
                     @endif
-                @endif
+                {{-- @endif --}}
                 </div>
         </div>
     </div>

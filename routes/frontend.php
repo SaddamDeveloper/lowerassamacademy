@@ -22,4 +22,5 @@ Route::group(['middleware'=>'auth:web','prefix'=>'web','namespace'=>'Web'],funct
     Route::get('/student-admission', 'StudentDashboardController@showAdmissionForm')->name('frontend.student_admission');
     Route::post('/student/form/submit', 'StudentDashboardController@store')->name('student.form.store');
     Route::get('/payment', 'StudentDashboardController@showPaymentForm')->name('frontend.payment');
+    Route::post('/student/pay/submit', 'StudentDashboardController@pay')->name('student.pay');
 });

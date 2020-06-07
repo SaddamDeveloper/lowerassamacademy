@@ -12,16 +12,14 @@ use Carbon\Carbon;
 use App\Session;
 use Intervention\Image\Facades\Image;
 use File;
+use App\Pay;
 class StudentDashboardController extends Controller
 {
     public function index()
     {
-        // $registration = Registration::where('user_id', Auth::guard('student')->user()->id)->first();
-        // $student = User::where('id', Auth::user()->id)->first();
-        // dd($student);
-        // $payment = Payment::where('buyer_email', $student->email)->first();
-
-        return view('frontend.studentdashboard');
+        $student = User::where('id', Auth::user()->id)->first();
+        $pay = Pay::where('user_id', Auth::user()->id)->first();
+        return view('frontend.studentdashboard', compact('student', 'pay'));
     }
 
     public function showAdmissionForm()
@@ -33,50 +31,50 @@ class StudentDashboardController extends Controller
         return view('frontend.admission', compact('student', 'generatedID', 'session'));
     }
     public function store(Request $request){
-        $this->validate($request, [
-            'session'                   => 'required',
-            'course'                    => 'required',
-            'sex'                       => 'required',
-            'dob'                       => 'required',
-            'fn'                        => 'required',
-            'mn'                        => 'required',
-            'gname'                     => 'required',
-            'occupation'                => 'required',
-            'income'                    => 'required|numeric',
-            'nationality'               => 'required',
-            'religion'                  => 'required',
-            'cast'                      => 'required',
-            'mobile'                    => 'required|numeric|min:10',
-            'village'                   => 'required',
-            'po'                        => 'required',
-            'ps'                        => 'required',
-            'dist'                      => 'required',
-            'state'                     => 'required',
-            'pin'                       => 'required',
-            'p_village'                 => 'required',
-            'p_po'                      => 'required',
-            'p_ps'                      => 'required',
-            'p_dist'                    => 'required',
-            'p_state'                   => 'required',
-            'p_pin'                     => 'required',
-            'exam'                      => 'required',
-            'registration'              => 'required',
-            'last_attended_school'      => 'required',
-            'last_school_addr'          => 'required',
-            'ncc'                       => 'required',
-            'bsg'                       => 'required',
-            'computer'                  => 'required',
-            'gap'                       => 'required',
-            'hostel'                    => 'required',
-            'place'                     => 'required',
-            'placed1'                   => 'required',
-            'dated1'                    => 'required',
-            'photo'                     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'ds1'                       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'placed2'                   => 'required',
-            'dated2'                    => 'required',
-            'ds2'                       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ]);
+        // $this->validate($request, [
+        //     'session'                   => 'required',
+        //     'course'                    => 'required',
+        //     'sex'                       => 'required',
+        //     'dob'                       => 'required',
+        //     'fn'                        => 'required',
+        //     'mn'                        => 'required',
+        //     'gname'                     => 'required',
+        //     'occupation'                => 'required',
+        //     'income'                    => 'required|numeric',
+        //     'nationality'               => 'required',
+        //     'religion'                  => 'required',
+        //     'cast'                      => 'required',
+        //     'mobile'                    => 'required|numeric|min:10',
+        //     'village'                   => 'required',
+        //     'po'                        => 'required',
+        //     'ps'                        => 'required',
+        //     'dist'                      => 'required',
+        //     'state'                     => 'required',
+        //     'pin'                       => 'required',
+        //     'p_village'                 => 'required',
+        //     'p_po'                      => 'required',
+        //     'p_ps'                      => 'required',
+        //     'p_dist'                    => 'required',
+        //     'p_state'                   => 'required',
+        //     'p_pin'                     => 'required',
+        //     'exam'                      => 'required',
+        //     'registration'              => 'required',
+        //     'last_attended_school'      => 'required',
+        //     'last_school_addr'          => 'required',
+        //     'ncc'                       => 'required',
+        //     'bsg'                       => 'required',
+        //     'computer'                  => 'required',
+        //     'gap'                       => 'required',
+        //     'hostel'                    => 'required',
+        //     'place'                     => 'required',
+        //     'placed1'                   => 'required',
+        //     'dated1'                    => 'required',
+        //     'photo'                     => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        //     'ds1'                       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        //     'placed2'                   => 'required',
+        //     'dated2'                    => 'required',
+        //     'ds2'                       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        // ]);
 
             // Photo of Student
             if($request->hasfile('photo'))
@@ -147,6 +145,7 @@ class StudentDashboardController extends Controller
             $registration->placed2                          = $request->input('placed2');
             $registration->dated2                           = $request->input('dated2');
             $registration->ds2                              = $psign;
+            $registration->payment_status                   = "1";
 
             $files = $request->uploaded_file;
             $doc_name = $request->document_name;
@@ -206,6 +205,38 @@ class StudentDashboardController extends Controller
         }else{
             $generatedID = 'LAA000001';
             return $generatedID;
+        }
+    }
+
+    public function showPaymentForm()
+    {
+        $user = User::where('id', Auth::user()->id)->first();
+        return view('frontend.payment', compact('user'));
+    }
+
+    public function pay(Request $request)
+    {
+        $this->validate($request, [
+            'transaction_id'        => 'required',
+            'payment_reciept'       => 'required|mimes:jpeg,png,jpg|max:2048'
+        ]);
+        
+        if($request->hasFile('payment_reciept')){
+            $payment_reciept_array = $request->file('payment_reciept');
+            $payment_reciept = $this->imageInsert($payment_reciept_array, $request, 1);
+        }
+        $pay = new Pay;
+        $pay->user_id = Auth::user()->id;
+        $pay->transaction_id = $request->input('transaction_id');
+        $pay->payment_reciept = $payment_reciept;
+        $pay->amount = "500";
+        $user = User::findOrFail(Auth::user()->id);
+        $user->payment_status = "2";
+        $user->save();
+        if($pay->save()){
+            return redirect()->route('student.dashboard')->with('message', 'Successfully Paid! We will be verifying your payment! Thank you');
+        }else {
+            return redirect()->back()->with('error', 'Something Went Wrong!');
         }
     }
 

@@ -139,7 +139,7 @@
     /*-------------------------------------
      jQuery MeanMenu activation code
      --------------------------------------*/
-    $('nav#dropdown').meanmenu({ siteLogo: "<a href='/' class='logo-mobile-menu mobile-bg-logo'><img src='frontend/img/logo.png' /></a>" });
+    $('nav#dropdown').meanmenu({ siteLogo: "<a href='/' class='logo-mobile-menu mobile-bg-logo'><img src='http://lowerassamacademy.com/frontend/img/logo.png' /></a>" });
 
     /*-------------------------------------
      Wow js Active
