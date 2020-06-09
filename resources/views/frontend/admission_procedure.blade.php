@@ -21,37 +21,48 @@
              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                  <div class="about-page-content-holder m-m-0">
                      <div class="content-box">
-                         <h2 style="font-family: Times New Roman; font-style: italic;">ADMISSION PROCEDURE</h2>
                          <p id="registrationidpageprincipal">
-                           (i) Senior Secondary classes will commence on a date notified after announcement of H.S.L.C and other Board Examination’s results of the SEBA.
-                           </P>
-                           <p id="registrationidpageprincipal">
-                           (ii) The applicant, Parent/Guardian must be personally present at the time of interview for the admission.
-                           </p>
-                           <p id="registrationidpageprincipal">
-                             (iii) Original marks sheet, Pass Certificate, Registration Card/Migration certificate must be shown at the time of interview for verification.
-                           </p>
-                            <p id="registrationidpageprincipal">
-                            (iv) All admissions are provisional and subject to be approval of board.
-                            </p>
-                            <p id="registrationidpageprincipal">
-                            (v) Admission fees will not be refunded for any reason nor can be transferred to any other person at any circumstances.
+                            <strong>Admission:</strong> Admission to the Academy will be made strictly on the basis of merit. Selected candidates shall have to produce the following origin.</p>
 
-                            </p>
-                            <p id="registrationidpageprincipal">
-                            (vi) No transfer certificate will be issued to anybody in any reason without clearance of the full session dues.
-                            </p>
+                           <p>a)	Attested copy of HSLC passed Certificate</p>
+                           <p>b)	Mark Sheet</p>
+                           <p>c)	Admit Card of HSLC Examination.</p>
+                           <p>d)	For ST/SC candidate attested copy of cast certificate.</p>
+                           <p>e)	Three copies of pass port size photograph (Coloured)</p>
+                           <p>
+                            <strong>Identity Card:</strong> Identity card shall be issued to every student of the Academy. The identity card is mandatory during Academic hours, any function or meeting of the Accademy.
+                           </p>
+
+                           <u>Uniform</u>
+                           <table class="table">
+                               <tr>
+                                   <th>Girls Trouser</th>
+                                   <th>Boys</th>
+                               </tr>
+                               <tr>
+                                   <td>Kameez</td>
+                                   <td>Trouser</td>
+                               </tr>
+                               <tr>
+                                   <td>Dopatta</td>
+                                   <td>Shirt</td>
+                               </tr>
+                               <tr>
+                                   <td>Footwear</td>
+                                   <td>Footwear</td>
+                               </tr>
+                           </table>
                      </div>
                  </div>
              </div>
-             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+             {{-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                  <div class="about-page-img-holder m-m-auto">
                      <img src="{{asset('frontend/allPhotos/photos/admission_procedure.gif')}}" class="img-responsive" alt="about">
                  </div>
-             </div>
+             </div> --}}
          </div>
 
-
+{{-- 
          <div class="row about-page1-inner">
 
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -70,7 +81,7 @@
                  </div>
              </div>
 
-         </div>
+         </div> --}}
      </div>
 
  </div>

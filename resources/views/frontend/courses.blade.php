@@ -21,9 +21,117 @@
                <div class="about-page-img-holder ">
 
                    <h2 style="color: #b62f08;font-weight: 600;font-family: serif;">Lower Assam Academy</h2>
-                   <h3 style="font-family: Times New Roman">(A) <i>Subject for HSSLC: 10:00 A.M to 3.00 P.M.</i></h3>
                    <ul>
-                     <li>  <p>Physics, Chemistry, Mathematics, Biology, MIL(Assamese), English, Anthropology, Computer</p></li>
+                     <li>  <p><strong>Academic Curriculum:</strong> The Academy Higher Secondary course in both Arts and Science streams (AHSEC)
+                        H.S Science (Both 1st Year & 2nd Year)
+                        </p></li>
+                        <li>
+                            <strong>H.S Science (Both 1st Year & 2nd Year)</strong>
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Compulsory Subject
+                                    </th>
+                                    <th>
+                                        Subject Code
+                                    </th>
+                                    <th>
+                                        Elective Subjects
+                                    </th>
+                                    <th>
+                                        Subjects code
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>ENGL</td>
+                                    <td>Mathematics</td>
+                                    <td>MATH</td>
+                                </tr>
+                                <tr>
+                                    <td>MIL</td>
+                                    <td></td>
+                                    <td>Chemistry</td>
+                                    <td>CHEM</td>
+                                </tr>
+                                <tr>
+                                    <td>Assamese</td>
+                                    <td>MAS</td>
+                                    <td>Physics</td>
+                                    <td>PHYS</td>
+                                </tr>
+                                <tr>
+                                    <td>Alt. English</td>
+                                    <td>ALTE</td>
+                                    <td>Biology</td>
+                                    <td>BIOL</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Anthroplogy</td>
+                                    <td>ANTH</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <strong>H.S Arts (Both 1st Year & 2nd Year)</strong>
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Compulsory Subject
+                                    </th>
+                                    <th>
+                                        Subject Code
+                                    </th>
+                                    <th>
+                                        Elective Subjects
+                                    </th>
+                                    <th>
+                                        Subjects code
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>ENGL</td>
+                                    <td>Pol. Science</td>
+                                    <td>POSC</td>
+                                </tr>
+                                <tr>
+                                    <td>MIL</td>
+                                    <td></td>
+                                    <td>Education</td>
+                                    <td>EDUC</td>
+                                </tr>
+                                <tr>
+                                    <td>Assamese</td>
+                                    <td>MAS</td>
+                                    <td>Logic & Philosophy</td>
+                                    <td>LOPH</td>
+                                </tr>
+                                <tr>
+                                    <td>Alt. English</td>
+                                    <td>ALTE</td>
+                                    <td>Economics</td>
+                                    <td>ECON</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Advance Assamese</td>
+                                    <td>ADAS</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Anthroplogy</td>
+                                    <td>ANTH</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>
+                            <strong>Medium of instruction:</strong> Both English and Assamese medium will be offered and separate classes will be arranged for each medium.
+                        </li>
                    </ul>
                </div>
            </div>
