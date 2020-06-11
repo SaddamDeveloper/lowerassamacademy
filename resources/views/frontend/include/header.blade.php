@@ -61,13 +61,16 @@
                                   <ul>
                                       <li><a href="{{route('web.courses')}}">Courses</a></li>
                                       <li><a href="{{route('web.exams')}}">Exams</a></li>
+                                      <li><a href="{{route('web.hostels')}}">Hostels</a></li>
+                                      <li><a href="{{route('web.library')}}">Library & Lab</a></li>
+                                      <li><a href="{{route('web.committee')}}">Academic Committee</a></li>
                                   </ul>
                               </li>
 
                               <li><a href="#">Admission</a>
                                   <ul>
                                       <li><a href="{{route('web.admission_proc')}}">Admission Procedure</a></li>
-                                      <li><a href="{{route('web.reg_admission')}}">Registration Cum Admission</a></li>
+                                      <li><a href="{{route('web.reg_admission')}}">Academic Discipline</a></li>
                                   </ul>
                               </li>
 

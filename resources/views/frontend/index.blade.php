@@ -26,20 +26,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div id="slider-direction-3" class="t-cn slider-direction">
-                <div class="slider-content s-tb slide-3">
-                    <div class="title-container s-tb-c">
-                        <div class="title1"><span class="paniya">Our Laboratory</span></div>
-                        <!-- <p>Affiliated to CBSE, Delhi
-                            <br>Class: Nursery to XII (Science, Arts, & Commerce) </p> -->
-   
-                        <div class="slider-btn-area">
-                            <!-- <a href="{{url('/contact')}}" class="default-big-btn">Join Now</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-                
         </div>
     </div>
     <div class="about2-area">

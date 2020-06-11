@@ -33,7 +33,7 @@
                             <strong>Identity Card:</strong> Identity card shall be issued to every student of the Academy. The identity card is mandatory during Academic hours, any function or meeting of the Accademy.
                            </p>
 
-                           <u>Uniform</u>
+                           <strong>Uniform:</strong>
                            <table class="table">
                                <tr>
                                    <th>Girls Trouser</th>
@@ -52,6 +52,62 @@
                                    <td>Footwear</td>
                                </tr>
                            </table>
+                           <strong>Attendance:</strong>  Students shall be required to attend at least 85% of classes held for theoretical & practical classes separately to come eligible to sit for the Final examination, otherwise disqualified for the same.
+
+                           <table class="table">
+                               <tr>
+                                   <th>Fees Structure</th>
+                               </tr>
+                               <tr>
+                                   <td>
+                                    <strong>From Science:</strong>
+                                    <ul>
+                                        <li>
+                                            ✓ Admission : <br>
+                                            H.S. 1st year:          10,500/- <br>
+                                            H.S. 2nd Year :       11,000/- <br>
+                                        </li>
+                                        <li>
+                                            ✓ Monthly : <br>
+                                            H.S. 1st year:          1,200/- <br>
+                                            H.S. 2nd Year :       1,200/-       <br>              
+                                        </li>
+                                    </ul>
+                                    
+                                   </td>
+                                   <td>
+                                    <strong>From Arts:</strong>
+                                    <ul>
+                                        <li>
+                                            ✓ Admission : <br>
+                                            H.S. 1st year:          6,000/- <br>
+                                            H.S. 2nd Year :       6,500/- <br>
+                                        </li>
+                                        <li>
+                                            ✓ Monthly : <br>
+                                            H.S. 1st year:          700/- <br>
+                                            H.S. 2nd Year :       700/-       <br>                             
+                                        </li>
+                                    </ul>
+                                   </td>
+                               </tr>
+                           </table>
+                           <strong>Scholarship:</strong>  Academy provides the following scholarship opportunities
+                               <ol>
+                                   <li>
+                                       Minority scholarship
+                                   </li>
+                                   <li>
+                                       Maulana Azad Foundation
+                                   </li>
+                                   <li>
+                                       Ajmal Foundation
+                                   </li>
+                                   <li>
+                                       Scholarship from the Academy for outstanding result in H.S. 1st Year.
+                                   </li>
+                               </ol>
+
                      </div>
                  </div>
              </div>

@@ -60,6 +60,21 @@ class WebsiteController extends Controller
         return view('frontend.courses');
     }
 
+    public function hostels()
+    {
+        return view('frontend.hostels');
+    }
+
+    public function library()
+    {
+        return view('frontend.library');
+    }
+
+    public function committee()
+    {
+        return view('frontend.committee');
+    }
+
     public function showStudentLoginForm(){
         return view('frontend.login');
     }

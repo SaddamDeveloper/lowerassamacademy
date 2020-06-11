@@ -8,7 +8,7 @@
             <div class="inner-page-banner-area">
                 <div class="container">
                     <div class="pagination-area">
-                        <h1 style="text-align: center;">Registration Cum Admission</h1>
+                        <h1 style="text-align: center;">ACADEMIC DISCIPLINE</h1>
                         <!-- <ul>
                             <li><a href="http://rajdhanipublicschool.in">Home</a> -</li>
                             <li>About</li>
@@ -24,11 +24,42 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="about-page-content-holder m-m-0">
                                 <div class="content-box">
-                                    <h2 style="font-family: Times New Roman; font-style: italic;">REGISTRATION CUM ADMISSION</h2>
+                                    <h2 style="font-family: Times New Roman; font-style: italic;">ACADEMIC DISCIPLINE</h2>
                                     <p id="registrationidpage">
-                                        Admission form for any session be filled in and deposited into the institute with the prescribed fees. Preference is given to a student registered earlier, provided he/she qualifies at the admission Test/Interview. Reservation fee for a seat in the residential section for any future session is 5000/-(Rupees Five thousand only) non refundable but adjustable at the time of admission.
+                                        <strong>Academic Discipline: </strong>
+                                        <ul>
+                                            <li>
+                                                ✓ Every students of the Academy shall be abide by the general rules & regulations as may be prescribed by the authority from time to time.
+                                            </li>
+                                            <li>
+                                                ✓ Students should not leave the Academy during class housrs without proper permission.
+                                            </li>
+                                            <li>
+                                                ✓ Students must attend their classes or any function of the Academy with clean uniform prescribed by the Academic authority.
+                                            </li>
+                                            <li>
+                                                ✓ Using mobile phone is strictly prohibited in the Academy campus.
+                                            </li>
+                                            <li>
+                                                ✓ A student shall be subjected to disciplinary action if he or she is found to be disobedient or in-decent in his or her behavior with the teacher and authority.
+                                            </li>
+                                            <li>
+                                                ✓ Student will have to pay monthly fees on or before the 10th every month. 
+                                            </li>
+                                            <li>
+                                                ✓ Monthly fees for the whole year must be paid at the time form fill up at HS first year examination/HS final year examination.
+                                            </li>
+                                            <li>
+                                                ✓ Consumption of alcohol drinks, gutkha, pan and smoking in the Academy premises are strictly prohibited.
+                                            </li>
+                                            <li>
+                                                ✓ The decision of the executive body of Lower Assam Academy in all matters shall be final and binding. However, the suggestions of the principal shall be considered favorably.
+                                            </li>
+                                            <li>
+                                                ✓ The Academy authority may amend the rules & regulations when felt necessary.
+                                            </li>
+                                        </ul>
                                     </p>
-    
     
                                 </div>
     
